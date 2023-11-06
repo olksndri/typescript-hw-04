@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { IntersectionOptions } from "react-intersection-observer";
-
+// import { IntersectionOptions } from "react-intersection-observer";
 type Props = {
   children: React.ReactNode;
   onContentEndVisible: () => void;
@@ -13,7 +12,7 @@ export function Observer({ children, onContentEndVisible }: Props) {
 
   useEffect(() => {
     // Вкажіть правильний тип для options, підказка, клас також можна вказувати як тип
-    const options: IntersectionOptions = {
+    const options: IntersectionObserverInit = {
       rootMargin: "0px",
       threshold: 1.0,
       root: null,
